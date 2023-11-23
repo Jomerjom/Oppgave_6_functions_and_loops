@@ -6,7 +6,7 @@
 console.log(formatText("      Lorem IPSUM.    ")); // expected output (without quotes): "lorem ipsum."
 
 function formatText(str) {
-  // Your code here
+  return str.trim().toLowerCase();
 }
 
 /* Exercise #2:
@@ -16,7 +16,7 @@ function formatText(str) {
 
 
   // Your code here
-
+const formatTextArrow = str => str.trim().toLowerCase();
 
 console.log(formatTextArrow("      Lorem IPSUM.    "));
 
@@ -26,6 +26,7 @@ console.log(formatTextArrow("      Lorem IPSUM.    "));
 
 function autoReply(customFunction) {
   // Your code here
+  customFunction("This is an automated response.");
 }
 
 autoReply(console.log);
@@ -43,7 +44,14 @@ autoReply(console.log);
 const display = () => {
   // Your code here
 };
+
+
 autoReply(display);
+
+
+
+
+
 
 /* Exercise #4: Create a function that takes two arguments:
                  1. a callback function
