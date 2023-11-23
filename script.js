@@ -63,6 +63,7 @@ autoReply(display);
 
 function customAutoReply(method, str) {
   // Your code here
+  method(str);
 }
 
 customAutoReply(console.log, "This is also an automated response.");
