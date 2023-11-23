@@ -105,6 +105,9 @@ autoReply(function (text) {
 
 function checkArray(callback, arr) {
   // Your code here
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i]);
+  }
 }
 
 const fiveWords = ["one", "two", "three", "four", "five"];
@@ -112,6 +115,10 @@ const threeFruits = ["apple", "banana", "mango"];
 
 checkArray(console.log, fiveWords);
 checkArray(console.log, threeFruits);
+
+
+
+
 
 
 /* Exercise #6: Similar to task 5, but instead of first declaring a function and then writing a loop by hand:
