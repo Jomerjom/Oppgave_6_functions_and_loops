@@ -43,10 +43,12 @@ autoReply(console.log);
 
 const display = () => {
   // Your code here
+  const h1 = document.createElement("h1");
+  h1.textContent = "Hello World!";
+  document.body.appendChild(h1);
 };
 
-
-autoReply(display);
+console.log(autoReply(display));
 
 
 
@@ -73,9 +75,12 @@ customAutoReply(console.log, "This is also an automated response.");
   Use both the function() {} syntax, and then also arrow function.
 */
 
+
 autoReply(function (text) {
   // Your code here
 });
+
+
 
 
 /* Exercise #5: Create a function that takes the following parameters:
@@ -134,6 +139,9 @@ checkArray(console.log, threeFruits);
 
 function loopThrough(arr) {
   // Your code here
+  arr.forEach((element, index) => {
+    console.log(`${element} at index ${index}`);
+  });
 }
 
 loopThrough(fiveWords);
@@ -153,7 +161,10 @@ const nums2 = [4321, 43, 2, 897698, 321, 87];
 
 function tripleArrayValues(arr) {
   // Your code here
+  return arr.map((element) => element * 3);
 }
+console.log(tripleArrayValues(nums));
+console.log(tripleArrayValues(nums2));
 
 /* Excercise #8: Use a different array method that will return a new array based on some filter,
                  For example lets say we just want odd numbers from the nums array:
@@ -165,9 +176,10 @@ function tripleArrayValues(arr) {
                              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 */
 
-function logEvenOfArray(arr) {
+function evenOfArray(arr) {
 // Your code here
+  return arr.filter((element) => element % 2 === 0);
 }
 
-logEvenOfArray(nums);
-logEvenOfArray(nums2);
+console.log(evenOfArray(nums));
+console.log(evenOfArray(nums2));
