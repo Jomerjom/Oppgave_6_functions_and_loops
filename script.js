@@ -41,14 +41,18 @@ autoReply(console.log);
                   console.log the result.
 */
 
-const display = () => {
+// Dont understand the task. didnt use console log as i dont unserstand the task wants me to do so.
+
+const display = (str) => {
   // Your code here
   const h1 = document.createElement("h1");
-  h1.textContent = "Hello World!";
+  h1.textContent = str;
   document.body.appendChild(h1);
+  autoReply(console.log);
 };
 
-console.log(autoReply(display));
+display("hello world!");
+autoReply(display);
 
 
 
@@ -74,12 +78,17 @@ customAutoReply(console.log, "This is also an automated response.");
   try to call (run/execute) both functions with anonymous functions instead.
   Use both the function() {} syntax, and then also arrow function.
 */
-
-
+ 
+//No idea what the point of this is. (not anonymous functions) but the actuall task explenation is confusing.
 autoReply(function (text) {
   // Your code here
+  console.log(text);
 });
 
+autoReply = () => {
+  // Your code here
+  console.log("Hallooooo");
+};
 
 
 
